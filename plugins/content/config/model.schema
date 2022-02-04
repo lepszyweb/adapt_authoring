@@ -25,7 +25,7 @@
       "type": "string",
       "required": true,
       "default": "en",
-      "title": "Default Language",
+      "title": "Domyślny język",
       "inputType": "Text",
       "validators": ["required"]
     },
@@ -33,7 +33,7 @@
       "type": "string",
       "required": true,
       "default": "ltr",
-      "title": "Text Direction",
+      "title": "Kierunek tekstu",
       "validators": ["required"],
       "inputType": {
         "type": "Select",
@@ -45,7 +45,7 @@
     },
     "_accessibility": {
       "type": "object",
-      "title": "Accessibility",
+      "title": "Dostępność",
       "properties" : {
         "_isEnabled": {
           "type": "boolean",
@@ -53,7 +53,7 @@
           "isSetting": false,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enable accessibility features?"
+          "title": "Włącz funkcje dostępności?"
         },
         "_isEnabledOnTouchDevices": {
           "type": "boolean",
@@ -61,7 +61,7 @@
           "isSetting": false,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enabled on touch devices?"
+          "title": "Włączone na urządzeniach dotykowych?"
         },
         "_shouldSupportLegacyBrowsers": {
           "type": "boolean",
@@ -69,8 +69,8 @@
           "isSetting": false,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Support legacy browsers?",
-          "help": "Need accessibility support for Internet Explorer v8?"
+          "title": "Obsługa starszych przeglądarek?",
+          "help": "Potrzeba wsparcia dostępności dla przeglądarki Internet Explorer v8?"
         },
         "_isTextProcessorEnabled": {
           "type": "boolean",
@@ -78,8 +78,8 @@
           "isSetting": false,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enable text reader support?",
-          "help": "Adds focusing to assist text reader software"
+          "title": "Włącz obsługę czytników tekstu?",
+          "help": "Dodaje fokusowanie, aby wspomóc oprogramowanie czytające tekst"
         },
         "_isSkipNavigationEnabled": {
           "type": "boolean",
@@ -87,41 +87,41 @@
           "isSetting": false,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enable Skip Navigation link?",
-          "help": "Adds a link to the start of the page to allow assistive technology users to skip over the navigation and straight into to the page content."
+          "title": "Włącz link Pomiń nawigację?",
+          "help": "Dodaje łącze na początku strony, aby umożliwić użytkownikom technologii wspomagających pominięcie nawigacji i przejście bezpośrednio do treści strony."
         }
       }
     },
     "screenSize": {
       "type": "object",
-      "title": "Screen Size",
+      "title": "Rozmiar ekranu",
       "properties": {
         "small": {
           "type": "number",
           "required": true,
           "default": 519,
-          "title": "Small",
+          "title": "Mały",
           "inputType": "Number",
           "validators": ["required", "number"],
-          "help": "Pixel width for the small breakpoint, e.g. cellphones"
+          "help": "Szerokość piksela dla małego punktu przerwania, np. telefony komórkowe"
         },
         "medium": {
           "type": "number",
           "required": true,
           "default": 759,
-          "title": "Medium",
+          "title": "Średni",
           "inputType": "Number",
           "validators": ["required", "number"],
-          "help": "Pixel width for the medium breakpoint, e.g. tablet devices"
+          "help": "Szerokość piksela dla średniego punktu przerwania, np. urządzenia typu tablet"
         },
         "large": {
           "type": "number",
           "required": true,
           "default": 1024,
-          "title": "Large",
+          "title": "Duży",
           "inputType": "Number",
           "validators": ["required", "number"],
-          "help": "Pixel width for the large breakpoint, e.g. laptop/desktop computers"
+          "help": "Szerokość w pikselach dla dużego punktu przerwania, np. laptopy / komputery stacjonarne"
         }
       }
     },
@@ -130,7 +130,7 @@
       "required": true,
       "default": 1,
       "isSetting": true,
-      "title": "Question Weight",
+      "title": "Waga pytania",
       "inputType": "Number",
       "validators": ["required", "number"]
     },
@@ -143,7 +143,7 @@
           "type": "string",
           "required": true,
           "default": "easeOutQuart",
-          "title": "Show Easing",
+          "title": "Pokaż ułatwienia",
           "inputType": {
             "type": "Select",
             "options": [
@@ -185,7 +185,7 @@
           "type": "string",
           "required": true,
           "default": "easeInQuart",
-          "title": "Hide Easing",
+          "title": "Ukryj ułatwienia",
           "inputType": {
             "type": "Select",
             "options": [
@@ -227,7 +227,7 @@
           "type": "number",
           "required": true,
           "default": 400,
-          "title": "Duration",
+          "title": "Czas trwania",
           "inputType": "Number",
           "validators": ["required", "number"]
         }
@@ -239,8 +239,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Generate sourcemaps?",
-      "help": "Allows the course JavaScript & CSS to be debugged via the browser's developer tools."
+      "title": "Generuj mapy źródłowe?",
+      "help": "Umożliwia debugowanie JavaScript i CSS kursu za pomocą narzędzi deweloperskich przeglądarki."
     },
     "_forceRouteLocking": {
       "type": "boolean",
@@ -248,12 +248,12 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Enforce route locking?",
-      "help": "If locking is enabled, this setting prevents navigating to locked routes"
+      "title": "Wymusić blokadę trasy?",
+      "help": "Jeśli blokada jest włączona, ustawienie to uniemożliwia nawigację do zablokowanych tras."
     },
     "_logging": {
       "type": "object",
-      "title": "Logging",
+      "title": "Logowanie",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -261,13 +261,13 @@
           "required": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enabled?"
+          "title": "Włączyć?"
         },
         "_level": {
           "type": "string",
           "required": true,
           "default" : "info",
-          "title" : "Log Level",
+          "title" : "Poziom logowania",
           "validators": [],
           "inputType": {
             "type": "Select",
@@ -285,7 +285,7 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Log to browser console?"
+          "title": "Loguj w konsoli przeglądarki?"
         }
       }
     },

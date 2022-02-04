@@ -6,17 +6,17 @@
   "properties": {
     "heroImage": {
       "type": "string",
-      "title": "Preview image",
+      "title": "Podgląd obrazka",
       "default": "",
       "inputType": "Asset:image",
       "validators": [],
       "editorOnly": true,
-      "help": "The image that will be shown in the dashboard for this course"
+      "help": "Obrazek, który będzie wyświetlany na pulpicie dla tego kursu"
     },
     "title": {
       "type": "string",
       "required": true,
-      "default": "New Course Title",
+      "default": "Tytuł nowego kursu",
       "inputType": "Text",
       "validators": [
         "required"
@@ -26,10 +26,10 @@
     "displayTitle": {
       "type": "string",
       "required": false,
-      "default": "New Course Title",
+      "default": "Tytuł nowego kursu",
       "inputType": "DisplayTitle",
       "validators": [],
-      "help": "This is the title that will be displayed on the course's main menu",
+      "help": "Jest to tytuł, który będzie wyświetlany w menu głównym kursu",
       "translatable": true
     },
     "description": {
@@ -39,7 +39,7 @@
       "inputType": "Text",
       "validators": [],
       "translatable": true,
-      "help": "This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course."
+      "help": "Zostanie to dodane do metadanych pliku manifestu kursu. Nie jest on (obecnie) wyświetlany nigdzie w obrębie kursu."
     },
     "body": {
       "type": "string",
@@ -58,8 +58,8 @@
     },
     "_start": {
       "type": "object",
-      "title": "Start settings",
-      "help": "The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu.",
+      "title": "Ustawienia startowe",
+      "help": "Ustawienia startowe pozwalają Ci kontrolować, która strona jest renderowana podczas ładowania kursu, potencjalnie omijając menu.",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -67,11 +67,11 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enabled?"
+          "title": "Włączyć?"
         },
         "_startIds": {
           "type": "array",
-          "title": "Start List",
+          "title": "Lista startowa",
           "items": {
             "type": "object",
             "properties": {
@@ -87,15 +87,15 @@
                 "editorOnly": true,
                 "inputType": "Checkbox",
                 "validators": [],
-                "title": "Skip if complete?",
-                "help": "If enabled, the page will not be selected as the first page if it has been already viewed/completed"
+                "title": "Pomiń, jeśli kompletne?",
+                "help": "Jeśli jest włączona, strona nie będzie wybierana jako pierwsza, jeśli była już przeglądana/ukończona"
               },
               "_className": {
                 "type": "string",
                 "inputType": "Text",
                 "required": true,
-                "title": "Classes",
-                "help": "Optional comma-separated list of class names which will be used to select this start page"
+                "title": "Klassy",
+                "help": "Opcjonalna, oddzielona przecinkami lista nazw klas, które będą używane do wyboru strony startowej"
               }
             }
           }
@@ -106,8 +106,8 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Force routing",
-          "help": "If enabled, the routing will be forced to the appropriate start page, regardless of the URL"
+          "title": "Wymuś trasę",
+          "help": "Jeśli jest włączone, routing będzie wymuszał przejście do odpowiedniej strony startowej, niezależnie od adresu URL"
         },
         "_isMenuDisabled": {
           "type": "boolean",
@@ -115,8 +115,8 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Disable menu",
-          "help": "Allows you to prevent the user from seeing - or navigating to - the main menu"
+          "title": "Wyłącz menu",
+          "help": "Umożliwia uniemożliwienie użytkownikowi wyświetlania menu głównego lub przechodzenia do niego."
         }
       }
     },
@@ -125,13 +125,13 @@
       "properties": {
         "_accessibility": {
           "type": "object",
-          "title": "Accessibility",
+          "title": "Dostępność",
           "required": true,
           "properties": {
             "accessibilityToggleTextOn": {
               "type": "string",
-              "title": "Toggle on label",
-              "default": "Turn accessibility on?",
+              "title": "Przełącz na etykietę",
+              "default": "Włączenie dostępności?",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -141,8 +141,8 @@
             },
             "accessibilityToggleTextOff": {
               "type": "string",
-              "title": "Toggle off label",
-              "default": "Turn accessibility off?",
+              "title": "Wyłączyć etykietę",
+              "default": "Wyłączanie dostępności?",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -152,8 +152,8 @@
             },
             "skipNavigationText": {
               "type": "string",
-              "title": "Skip navigation label",
-              "default": "Skip navigation",
+              "title": "Etykieta Pomiń nawigację",
+              "default": "Nawigacja pomijająca",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -163,12 +163,12 @@
             },
             "_accessibilityInstructions": {
               "type": "object",
-              "title": "Accessibility instructions",
+              "title": "Instrukcje dotyczące dostępnośc",
               "properties": {
                 "touch": {
                   "type": "string",
-                  "title": "For touch devices",
-                  "default": "Usage instructions. Use swipe left for next. Use swipe right for previous. Use a double tab to select. Use a two finger slide up to go to the top of the page.",
+                  "title": "Dla urządzeń dotykowych",
+                  "default": "Instrukcje użytkowania. Przesuń palcem w lewo, aby przejść do następnej pozycji. Przesuń palcem w prawo, aby wybrać poprzednią pozycję. Użyj podwójnego tabulatora, aby wybrać. Przesuń dwoma palcami w górę, aby przejść na górę strony.",
                   "inputType": "Text",
                   "required": true,
                   "validators": [
@@ -178,8 +178,8 @@
                 },
                 "notouch": {
                   "type": "string",
-                  "title": "For non-touch devices",
-                  "default": "Usage instructions. Use tab for next. Use shift tab for previous. Use enter to select. Use escape to go to the top of the page.",
+                  "title": "W przypadku urządzeń niedotykowych",
+                  "default": "Instrukcja obsługi. Użyj tabulatora dla następnego. Użyj shift tab dla poprzedniego. Użyj enter, aby wybrać. Użyj escape, aby przejść na górę strony.",
                   "inputType": "Text",
                   "required": true,
                   "validators": [
@@ -189,8 +189,8 @@
                 },
                 "ipad": {
                   "type": "string",
-                  "title": "For iPad",
-                  "default": "Usage instructions for touchscreens. Use swipe left for next. Use swipe right for previous. Use a double tab to select. Use a two finger slide up to go to the top of the page. Usage instructions for keyboard access. Use left for next. Use right for previous. Use up and down together to select.",
+                  "title": "Dla iPad",
+                  "default": "Instrukcje użytkowania dla ekranów dotykowych. Przesuń palcem w lewo, aby przejść dalej. Przesuń palcem w prawo, aby wybrać poprzednią pozycję. Użyj podwójnej zakładki, aby wybrać. Użyj przesunięcia dwoma palcami w górę, aby przejść na górę strony. Instrukcje użytkowania dla klawiatur. Użyj lewego przycisku dla następnego. Użyj prawego przycisku dla poprzedniego. Użyj góra i dół, aby wybrać.",
                   "inputType": "Text",
                   "required": true,
                   "validators": [
@@ -207,15 +207,15 @@
                 "navigation": {
                   "type": "string",
                   "title": "",
-                  "default": "Course navigation bar",
+                  "default": "Pasek nawigacji kursu",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
                 },
                 "skipNavigation": {
                   "type": "string",
-                  "title": "Skip Navigation",
-                  "default": "Skip Navigation",
+                  "title": "Pomiń nawigację",
+                  "default": "Pomiń nawigację",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -223,7 +223,7 @@
                 "menuLoaded": {
                   "type": "string",
                   "title": "",
-                  "default": "Menu loaded",
+                  "default": "Menu załadowane",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -231,7 +231,7 @@
                 "page": {
                   "type": "string",
                   "title": "",
-                  "default": "Page",
+                  "default": "Strona",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -239,7 +239,7 @@
                 "pageLoaded": {
                   "type": "string",
                   "title": "",
-                  "default": "Page loaded",
+                  "default": "Strona załadowana",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -247,7 +247,7 @@
                 "previous": {
                   "type": "string",
                   "title": "",
-                  "default": "Back",
+                  "default": "Wstecz",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -255,7 +255,7 @@
                 "navigationDrawer": {
                   "type": "string",
                   "title": "",
-                  "default": "Open course resources and search",
+                  "default": "Otwarte zasoby kursów i wyszukiwanie",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -263,7 +263,7 @@
                 "drawer": {
                   "type": "string",
                   "title": "",
-                  "default": "Side drawer",
+                  "default": "Szuflada boczna",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -271,7 +271,7 @@
                 "closePopup": {
                   "type": "string",
                   "title": "",
-                  "default": "Close popup",
+                  "default": "Zamknij okno",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -279,7 +279,7 @@
                 "next": {
                   "type": "string",
                   "title": "",
-                  "default": "Next",
+                  "default": "Następny",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -287,7 +287,7 @@
                 "done": {
                   "type": "string",
                   "title": "",
-                  "default": "Done",
+                  "default": "Zrobione",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -295,7 +295,7 @@
                 "complete": {
                   "type": "string",
                   "title": "",
-                  "default": "Complete",
+                  "default": "Ukończone",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -303,7 +303,7 @@
                 "incomplete": {
                   "type": "string",
                   "title": "",
-                  "default": "Incomplete",
+                  "default": " Niekompletne",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -311,7 +311,7 @@
                 "correct": {
                   "type": "string",
                   "title": "",
-                  "default": "Correct",
+                  "default": "Poprawne",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -319,7 +319,7 @@
                 "incorrect": {
                   "type": "string",
                   "title": "",
-                  "default": "Incorrect",
+                  "default": "Niepoprawne",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -327,7 +327,7 @@
                 "locked": {
                   "type": "string",
                   "title": "",
-                  "default": "Locked",
+                  "default": "Zablokowane",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -335,7 +335,7 @@
                 "accessibilityToggleButton": {
                   "type": "string",
                   "title": "",
-                  "default": "By selecting this button you can set whether accessibility is turned on or off",
+                  "default": "Wybierając ten przycisk można ustawić, czy dostępność jest włączona czy wyłączona.",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -343,7 +343,7 @@
                 "feedbackPopUp": {
                   "type": "string",
                   "title": "",
-                  "default": "Popup opened",
+                  "default": "Popup został otwarty",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -351,7 +351,7 @@
                 "visited": {
                   "type": "string",
                   "title": "",
-                  "default": "Visited",
+                  "default": "Odwiedzony",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -359,7 +359,7 @@
                 "menuIndicatorHeading": {
                   "type": "string",
                   "title": "",
-                  "default": "Menu item heading ",
+                  "default": "Nagłówek pozycji menu ",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -378,11 +378,11 @@
       "properties": {
         "_submit": {
           "type": "object",
-          "title": "Submit",
+          "title": "Wyślij",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Submit",
+              "default": "Wyślij",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -393,7 +393,7 @@
             "ariaLabel": {
               "type": "string",
               "title": "ARIA label",
-              "default": "Submit",
+              "default": "Wyślij",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -405,11 +405,11 @@
         },
         "_reset": {
           "type": "object",
-          "title": "Reset",
+          "title": "Wyczyść",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Reset",
+              "default": "Wyczyść",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -420,7 +420,7 @@
             "ariaLabel": {
               "type": "string",
               "title": "ARIA label",
-              "default": "Reset",
+              "default": "Wyczyść",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -432,11 +432,11 @@
         },
         "_showCorrectAnswer": {
           "type": "object",
-          "title": "Show correct answer",
+          "title": "Pokaż poprawną odpowiedź",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Show correct answer",
+              "default": "Pokaż poprawną odpowiedź",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -447,7 +447,7 @@
             "ariaLabel": {
               "type": "string",
               "title": "ARIA label",
-              "default": "Show correct answer",
+              "default": "Pokaż prawidłową odpowiedź",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -459,11 +459,11 @@
         },
         "_hideCorrectAnswer": {
           "type": "object",
-          "title": "Hide correct answer",
+          "title": "Ukryj poprawną odpowiedź",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Hide correct answer",
+              "default": "Ukryj poprawną odpowiedź",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -474,7 +474,7 @@
             "ariaLabel": {
               "type": "string",
               "title": "ARIA label",
-              "default": "Hide correct answer",
+              "default": "Ukryj poprawną odpowiedź",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -486,11 +486,11 @@
         },
         "_showFeedback": {
           "type": "object",
-          "title": "Show feedback",
+          "title": "Pokaż informację zwrotną",
           "properties": {
             "buttonText": {
               "type": "string",
-              "default": "Show feedback",
+              "default": "Pokaż informację zwrotną",
               "inputType": "Text",
               "required": true,
               "validators": [
@@ -513,8 +513,8 @@
         },
         "remainingAttemptsText": {
           "type": "string",
-          "title": "Remaining attempts label",
-          "default": "remaining attempts",
+          "title": "Etykieta pozostałych prób",
+          "default": "pozostałe próby",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -524,7 +524,7 @@
         },
         "remainingAttemptText": {
           "type": "string",
-          "title": "Final attempt label",
+          "title": "Etykieta ostatniej próby",
           "default": "final attempt",
           "inputType": "Text",
           "required": true,
@@ -535,8 +535,8 @@
         },
         "disabledAriaLabel": {
           "type": "string",
-          "title": "Disabled ARIA label",
-          "default": "This button is disabled at the moment",
+          "title": "Wyłączona etykieta ARIA",
+          "default": "Ten przycisk jest w tej chwili wyłączony",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -548,7 +548,7 @@
     },
     "tags": {
       "type": "array",
-      "inputType": "Tags",
+      "inputType": "Tagi",
       "items": {
         "type": "objectid",
         "inputType": "Text",
@@ -556,8 +556,8 @@
         "editorOnly": true,
         "ref": "tag"
       },
-      "title": "Tags",
-      "help": "Add tags to your course by entering one or more words, separated with a comma (,)",
+      "title": "Tagi",
+      "help": "Dodaj tagi do swojego kursu wpisując jedno lub więcej słów, oddzielonych przecinkiem (,)",
       "editorOnly": true
     },
     "_classes": {
@@ -566,7 +566,7 @@
       "isSetting": true,
       "inputType": "Text",
       "validators": [],
-      "title": "Classes"
+      "title": "Klasa"
     },
     "_isSelected": {
       "type": "boolean",
@@ -584,12 +584,12 @@
       "editorOnly": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Share with all users",
-      "help": "Controls whether or not your colleagues will be able to see this course from the 'Shared courses' option"
+      "title": "Udostępnianie wszystkim użytkownikom",
+      "help": "Określa, czy Twoi współpracownicy będą mogli zobaczyć ten kurs z opcji 'Współdzielone kursy'."
     },
     "_shareWithUsers": {
       "type": "array",
-      "inputType": "Users",
+      "inputType": "Użytkownicy",
       "items": {
         "type": "objectid",
         "inputType": "Text",
@@ -597,8 +597,8 @@
         "editorOnly": true,
         "ref": "user"
       },
-      "title": "Share with specific users",
-      "help": "Specifies which colleagues will be able to see this course from the 'Shared courses' option"
+      "title": "Udostępnianie określonym użytkownikom",
+      "help": "Określa, którzy koledzy będą mogli zobaczyć ten kurs z opcji 'Współdzielone kursy'."
     },
     "themeSettings": {
       "type": "object"
@@ -622,8 +622,8 @@
           "unlockFirst"
         ]
       },
-      "title": "Menu lock type",
-      "help": "Defines which (if any) locking mechanism will be used for menu items",
+      "title": "Typ blokady menu",
+      "help": "Określa, który (jeśli w ogóle) mechanizm blokowania będzie używany dla pozycji menu",
       "validators": []
     },
     "customStyle": {
@@ -631,8 +631,8 @@
       "default": "",
       "inputType": "CodeEditor:less",
       "validators": [],
-      "title": "Custom CSS/LESS code",
-      "help": "Add any custom CSS or valid LESS code here"
+      "title": "Własny kod CSS/LESS",
+      "help": "Dodaj tutaj dowolny własny kod CSS lub poprawny kod LESS."
     },
     "externalReferences": {
       "type" : "object"
